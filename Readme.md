@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Марина Мигунова](https://up.htmlacademy.ru/htmlcss/29/user/1151469).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Корейкин](https://htmlacademy.ru/profile/ankormoreankor).
 
 ---
 
