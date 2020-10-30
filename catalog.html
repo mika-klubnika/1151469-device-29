@@ -16,9 +16,13 @@
         <img src="img/logo.png" width="163" height="35" alt="Логотип «Device»">
       </a>
       <div class="wrapper-header-link">
-        <input class="search-input" type="search" placeholder="Поиск по сайту">
+        <form class="form-search-input" action="https://echo.htmlacademy.ru" method="post">
+          <input class="search-input" type="search" placeholder="Поиск по сайту">
+          <button class="form-search-button" type="submit">найти</button>
+        </form>
         <div class="wrapper-user-link">
-          <a class="login header-link link" href="#">Войти</a>
+          <a class="login header-link link" href="#">Валентин Петухов</a>
+          <a class="link" href="#">Выйти</a>
           <a class="compare header-link link" href="#">Сравнить</a>
           <a class="basket header-link link" href="#">Корзина</a>
         </div>
@@ -27,36 +31,44 @@
         <nav class="main-navigation">
           <ul class="main-navigation-list list">
             <li class="main-navigation-item submenu">
-              <a href="#">Каталог товаров</a>
-              <ul class="submenu-list list">
-                <li class="submenu-item">
-                  <a href="#">Виртуальная реальность</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Квадрокоптер</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Моноподы для селфи</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Умные часы</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Экшн-камеры</a>
-                </li>
-              </ul>
+              <a class="link" href="#">Каталог товаров</a>
+              <div class="wrapper-submenu-list">
+                <ul class="submenu-list list">
+                  <div class="wrapper-submenu-item">
+                    <li class="submenu-item">
+                      <a class="link" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a class="link" href="#">Моноподы для селфи</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a class="link" href="#">Экшн-камеры</a>
+                    </li>
+                  </div>
+                  <div class="wrapper-submenu-item">
+                    <li class="submenu-item">
+                      <a class="link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a class="link" href="#">Умные часы</a>
+                    </li>
+                  </div>
+                  <div class="wrapper-submenu-item">
+                    <li class="submenu-item">
+                      <a class="link" href="#">Квадрокоптер</a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </li>
             <li class="main-navigation-item">
-              <a href="#">Доставка</a>
+              <a class="link" href="#">Доставка</a>
             </li>
             <li class="main-navigation-item">
-              <a href="#">Гарантия</a>
+              <a class="link" href="#">Гарантия</a>
             </li>
             <li class="main-navigation-item">
-              <a href="#">Контакты</a>
+              <a class="link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
