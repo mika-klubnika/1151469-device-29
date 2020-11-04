@@ -755,6 +755,11 @@ img {
   text-transform: uppercase;
 }
 
+.wrapper-link:hover {
+  background-color: var(--yellow-dark);
+  transition: all .3s linear;
+}
+
 /* footer */
 .main-footer {
   background-color: var(--black-medium);
@@ -814,6 +819,10 @@ img {
   opacity: 0.3;
 }
 
+.address {
+  font-style: normal;
+}
+
 .wrap-footer-item--logo {
   padding-bottom: 35px;
 }
@@ -867,9 +876,12 @@ img {
   display: flex;
   justify-content: space-between;
   justify-self: center;
-  opacity: 0.3;
 }
 
+.icon-footer {
+  display: block;
+  opacity: 0.3;
+}
 
 .icon-footer:hover,
 .icon-footer:focus {
