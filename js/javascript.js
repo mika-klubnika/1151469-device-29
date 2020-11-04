@@ -1,3 +1,3 @@
-var slid =  document.querySelectorAll(".main-slider-item");
-var buttonSlid = document.querySelectorAll(".main-slider-link");
+var slides =  document.querySelectorAll(".main-slider-item");
+var sliderButtons = document.querySelectorAll(".slider-controls-button");
 
