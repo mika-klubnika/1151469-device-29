@@ -9,20 +9,50 @@
 </head>
 
 <body>
+  <svg display="none">
+    <symbol id="icon-user" width="17" height="20" viewBox="0 0 17 20" >
+      <path
+        d="M8.5 2.33331C9.69709 2.33331 10.6667 3.37748 10.6667 4.66665C10.6667 5.95581 9.69709 6.99998 8.5 6.99998C7.30292 6.99998 6.33334 5.95581 6.33334 4.66665C6.33334 3.37748 7.30292 2.33331 8.5 2.33331ZM8.5 11.6666C8.5 11.6666 12.8333 11.6666 12.8333 10.5C12.8333 9.09998 10.7208 7.58331 8.5 7.58331C6.27917 7.58331 4.16667 9.09998 4.16667 10.5C4.16667 11.6666 8.5 11.6666 8.5 11.6666Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="icon-chart" width="14" height="14" viewBox="0 0 14 14">
+      <path
+        d="M2.91669 5.36669H4.66669V11.0834H2.91669V5.36669ZM6.18335 2.91669H7.81669V11.0834H6.18335V2.91669ZM9.45002 7.58335H11.0834V11.0834H9.45002V7.58335Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="icon-cart" width="10" height="10" viewBox="0 0 10 10">
+      <path
+        d="M9.86209 2.52174C9.79272 2.43994 9.69335 2.39319 9.58921 2.39319H7.65768V3.41883C7.65768 3.89011 7.25353 4.27353 6.75677 4.27353C6.26002 4.27353 5.85587 3.89011 5.85587 3.41883V2.39319H4.05407V3.41883C4.05407 3.89011 3.64993 4.27353 3.15317 4.27353C2.65641 4.27353 2.25227 3.89011 2.25227 3.41883V2.39319H0.320829C0.216595 2.39319 0.117225 2.43994 0.0478559 2.52174C-0.0216036 2.60353 -0.0544864 2.71259 -0.0425945 2.82148L0.605604 8.78464C0.617676 9.45695 1.14173 10 1.78425 10H8.12578C8.76822 10 9.29227 9.45695 9.30443 8.78455L9.95263 2.82139C9.96443 2.71259 9.93155 2.60353 9.86209 2.52174Z"
+        fill="currentColor" />
+      <path
+        d="M3.15321 3.76068C3.35195 3.76068 3.51357 3.60735 3.51357 3.4188V1.53846C3.51357 1.01051 4.07474 0.683761 4.59465 0.683761H5.49555C6.04276 0.683761 6.39645 1.01923 6.39645 1.53846V3.4188C6.39645 3.60735 6.55816 3.76068 6.75681 3.76068C6.95546 3.76068 7.11717 3.60735 7.11717 3.4188V1.53846C7.11717 0.647009 6.43519 0 5.49555 0H4.59465C3.60114 0 2.79285 0.690171 2.79285 1.53846V3.4188C2.79285 3.60735 2.95447 3.76068 3.15321 3.76068Z"
+        fill="currentColor" />
+    </symbol>
+  </svg>
+
   <div class="container">
     <header class="main-header">
       <a class="main-logo">
-        <img src="img/logo.png" width="163" height="35" alt="Логотип «Device»">
+        <img src="img/logo.svg" width="163" height="35" alt="Логотип «Device»">
       </a>
       <div class="wrapper-header-link">
         <form class="form-search-input" action="https://echo.htmlacademy.ru" method="post">
-          <input class="search-input" type="search" placeholder="Поиск по сайту">
+          <input class="search-input" type="search" name="search" placeholder="Поиск по сайту">
           <button class="form-search-button" type="submit">найти</button>
         </form>
         <div class="wrapper-user-link">
-          <a class="login header-link link" href="#">Войти</a>
-          <a class="compare header-link link" href="#">Сравнить</a>
-          <a class="basket header-link link" href="#">Корзина</a>
+          <a class="login header-link link" href="#">
+            <svg class="header-svg">
+              <use xlink:href="#icon-user"></use>
+            </svg>Войти</a>
+          <a class="compare header-link link" href="#">
+            <svg class="header-svg">
+              <use xlink:href="#icon-chart"></use>
+            </svg>Сравнить</a>
+          <a class="basket header-link link" href="#">
+            <svg class="header-svg">
+              <use xlink:href="#icon-cart"></use>
+            </svg>Корзина</a>
         </div>
       </div>
       <div class="wrapper-navigation">
@@ -79,7 +109,7 @@
       <section class="main-slider">
         <h2 class="visually-hidden">Хит продаж</h2>
         <ul class="main-slider-list list">
-          <li class="main-slider-item main-slid--1 main-slider-item--active">
+          <li class="main-slider-item main-slider-item--active">
             <img class="main-slider-img-selfie" src="img/slider-1.png" width="384" height="486" alt="Селфи палка">
             <div class="wrapper-main-slider-text">
               <h3 class="title text">Делай селфи,<br> как Бен Стиллер!</h3>
@@ -87,7 +117,7 @@
                 Карл!) метров длиной и весом
                 всего
                 5 килограмм.</p>
-              <a class="main-slider-link link" href="#">подробнее</a>
+              <a class="main-slider-link link button" href="#">подробнее</a>
               <dl class="table-description">
                 <div class="wrapper-table-element">
                   <dt class="row-specifications">8,5 м</dt>
@@ -104,14 +134,14 @@
               </dl>
             </div>
           </li>
-          <li class="main-slider-item main-slid--2">
+          <li class="main-slider-item">
             <img class="main-slider-img-bracelet" src="img/slider-2.png" width="345" height="485" alt="Фитнес браслет">
             <div class="wrapper-main-slider-text">
               <h3 class="title text">Худеем <br> правильно!</h3>
               <p class="text-slider text">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать
                 занятия и
                 соблюдать диету.</p>
-              <a class="main-slider-link link" href="#">подробнее</a>
+              <a class="main-slider-link link button" href="#">подробнее</a>
               <dl class="table-description">
                 <div class="wrapper-table-element">
                   <dt class="row-specifications">48 часов</dt>
@@ -120,14 +150,14 @@
               </dl>
             </div>
           </li>
-          <li class="main-slider-item main-slid--3">
+          <li class="main-slider-item">
             <img class="main-slider-img-quadcopter" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
             <div class="wrapper-main-slider-text">
               <h3 class="title text">Порхает как бабочка, жалит как пчела!</h3>
               <p class="text-slider text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером,
                 замаскированным под стандартную
                 камеру.</p>
-              <a class="main-slider-link link" href="#">подробнее</a>
+              <a class="main-slider-link link button" href="#">подробнее</a>
               <dl class="table-description">
                 <div class="wrapper-table-element">
                   <dt class="row-specifications">800 м</dt>
@@ -142,7 +172,8 @@
           </li>
         </ul>
         <div class="main-slider-controls">
-          <button class="slider-controls-button slider-controls-button--active" type="button" aria-label="Первый слайд"></button>
+          <button class="slider-controls-button slider-controls-button--active" type="button"
+            aria-label="Первый слайд"></button>
           <button class="slider-controls-button" type="button" aria-label="Второй слайд"></button>
           <button class="slider-controls-button" type="button" aria-label="Третий слайд"></button>
         </div>
@@ -158,7 +189,7 @@
             </a>
           </li>
           <li class="popular-item">
-            <a class="link" href="#">
+            <a class="link" href="catalog.html">
               <div class="popular-item-img popular--2"></div>
               <h3 class="popular-item-title text">Моноподы для селфи</h3>
             </a>
@@ -195,10 +226,10 @@
       <h2 class="visually-hidden">Сервис</h2>
 
       <div class="services-slider-controls">
-        <button class="services-button button-color button-one-gradient" type="button"
+        <button class="services-button button-color button-one-gradient button" type="button"
           aria-label="Первый слайд">доставка</button>
-        <button class="services-button button-color" type="button" aria-label="Второй слайд">гарантия</button>
-        <button class="services-button button-color active-services-button" type="button"
+        <button class="services-button button-color button" type="button" aria-label="Второй слайд">гарантия</button>
+        <button class="services-button button-color active-services-button button" type="button"
           aria-label="Третий слайд">кредит</button>
       </div>
       <ul class="services-slider-list list">
@@ -256,7 +287,7 @@
           <li class="delivery-item">Автотрейдинг</li>
           <li class="delivery-item">ЖелДорЭкспедиция</li>
         </ul>
-        <a class="wrapper-link link" href="#">Подробнее о нас</a>
+        <a class="wrapper-link link button" href="#">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2 class="title title-letter-spacing text">Контакты</h2>
@@ -266,7 +297,7 @@
         <div class="map">
           <img src="img/map.png" alt="Карта">
         </div>
-        <a class="wrapper-link link" href="#">Напишите нам</a>
+        <a class="wrapper-link link button" href="#">Напишите нам</a>
       </section>
     </div>
     </main>
@@ -276,13 +307,22 @@
   <footer class="main-footer">
     <div class="container footer">
       <div class="footer-links wrap-links">
-        <a class="footer-link footer-login" href="#">Войти</a>
-        <a class="footer-link footer-compare" href="#">Сравнить</a>
-        <a class="footer-link footer-basket" href="#">Корзина</a>
+        <a class="footer-link footer-login" href="#">
+          <svg class="header-svg footer-svg">
+            <use xlink:href="#icon-user"></use>
+          </svg>Войти</a>
+        <a class="footer-link footer-compare" href="#">
+          <svg class="header-svg footer-svg">
+            <use xlink:href="#icon-chart"></use>
+          </svg>Сравнить</a>
+        <a class="footer-link footer-basket" href="#">
+          <svg class="header-svg footer-svg">
+            <use xlink:href="#icon-cart"></use>
+          </svg>Корзина</a>
       </div>
       <div class="wrap-footer-item wrap-footer-item--logo">
         <a>
-          <img src=" img/logo-1.png" width="163" height="35" alt="Логотип сайта">
+          <img src=" img/logo-1.svg" width="163" height="35" alt="Логотип сайта">
         </a>
       </div>
       <div class="wrap-footer-item wrap-footer-item--services">
