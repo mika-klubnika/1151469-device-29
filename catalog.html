@@ -34,7 +34,7 @@
   <div class="container">
     <header class="main-header">
       <a class="main-logo" href="index.html">
-        <img src="img/logo.png" width="163" height="35" alt="Логотип «Device»">
+        <img src="img/logo.svg" width="163" height="35" alt="Логотип «Device»">
       </a>
       <div class="wrapper-header-link">
         <form class="form-search-input" action="https://echo.htmlacademy.ru" method="post">
@@ -42,13 +42,12 @@
           <button class="form-search-button" type="submit">найти</button>
         </form>
         <div class="wrapper-user-link">
-            <div class="login-link">
-              <svg class="header-svg">
+          <div class="login-link">
+            <a class="login header-link link" href="#"> <svg class="header-svg">
                 <use xlink:href="#icon-user"></use>
-              </svg>
-              <a class="login header-link link" href="#">Валентин Петухов</a>
-              <a class="go-out link" href="#">Выйти</a>
-            </div>
+              </svg>Валентин Петухов</a>
+            <a class="go-out link" href="#">Выйти</a>
+          </div>
           <a class="compare header-link link" href="#">
             <svg class="header-svg">
               <use xlink:href="#icon-chart"></use>
@@ -140,7 +139,7 @@
         </a>
       </div>
     </aside>
-    <section class="filter">
+    <aside class="filter">
       <div class="wrapper-filter">
         <h3 class="form-title text">фильтр:</h3>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -185,7 +184,8 @@
                   <label for="filter-blue">Синий</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="red" id="filter-red" checked>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="red" id="filter-red"
+                    checked>
                   <label for="filter-red">Красный</label>
                 </li>
                 <li class="filter-option">
@@ -200,11 +200,13 @@
               <legend class="filter-title">Bluetooth</legend>
               <ul class="list">
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth-option" value="with-Bluetooth" id="filter-yes" checked>
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth-option"
+                    value="with-Bluetooth" id="filter-yes" checked>
                   <label for="filter-yes">Есть</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth-option" value="without-Bluetooth" id="filter-no">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth-option"
+                    value="without-Bluetooth" id="filter-no">
                   <label for="filter-no">Нет</label>
                 </li>
               </ul>
@@ -213,13 +215,17 @@
           <button class="filter-button button" type="submit">Показать</button>
         </form>
       </div>
-    </section>
+    </aside>
     <section class="product-catalog">
       <ul class="product-catalog-list list">
         <li>
           <a href="#">
             <img src="img/item-1.png" alt="" width="360" height="380">
           </a>
+          <div class="wrapper-product-cart">
+            <button class="button">в корзину</button>
+            <button class="product-cart-text">Добавить к сравнению</button>
+          </div>
           <div class="wrap-product-text">
             <h3 class="text">Любительская селфи-палка</h3>
             <span>500 руб.</span>
@@ -229,6 +235,10 @@
           <a href="#">
             <img src="img/item-2.png" alt="" width="360" height="380">
           </a>
+          <div class="wrapper-product-cart">
+            <button class="button">в корзину</button>
+            <button class="product-cart-text">Добавить к сравнению</button>
+          </div>
           <div class="wrap-product-text">
             <h3 class="text">Профессиональная<br> селфи-палка</h3>
             <span>1 500 руб.</span>
@@ -238,6 +248,10 @@
           <a href="#">
             <img src="img/item-3.png" alt="" width="360" height="380">
           </a>
+          <div class="wrapper-product-cart">
+            <button class="button">в корзину</button>
+            <button class="product-cart-text">Добавить к сравнению</button>
+          </div>
           <div class="wrap-product-text">
             <h3 class="text">Непотопляемая<br> селфи-палка</h3>
             <span>2 500 руб.</span>
@@ -247,6 +261,10 @@
           <a href="#">
             <img src="img/item-4.png" alt="" width="360" height="380">
           </a>
+          <div class="wrapper-product-cart">
+            <button class="button">в корзину</button>
+            <button class="product-cart-text">Добавить к сравнению</button>
+          </div>
           <div class="wrap-product-text">
             <h3 class="text">Селфи-палка «Следуй за мной»</h3>
             <span>4 900 руб.</span>
@@ -275,10 +293,13 @@
   <footer class="main-footer">
     <div class="container footer">
       <div class="footer-links wrap-links">
-        <a class="footer-link footer-login" href="#">
+        <div class="login-link">
+          <a class="footer-link footer-login" href="#">
           <svg class="header-svg footer-svg">
             <use xlink:href="#icon-user"></use>
-          </svg>Войти</a>
+          </svg>Валентин Петухов</a>
+          <a class="go-out link" href="#">Выйти</a>
+        </div>
         <a class="footer-link footer-compare" href="#">
           <svg class="header-svg footer-svg">
             <use xlink:href="#icon-chart"></use>
@@ -290,7 +311,7 @@
       </div>
       <div class="wrap-footer-item wrap-footer-item--logo">
         <a>
-          <img src=" img/logo-1.png" width="163" height="35" alt="Логотип сайта">
+          <img src=" img/logo-1.svg" width="163" height="35" alt="Логотип сайта">
         </a>
       </div>
       <div class="wrap-footer-item wrap-footer-item--services">

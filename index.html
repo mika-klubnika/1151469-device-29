@@ -10,7 +10,7 @@
 
 <body>
   <svg display="none">
-    <symbol id="icon-user" width="17" height="20" viewBox="0 0 17 20" >
+    <symbol id="icon-user" width="17" height="20" viewBox="0 0 17 20">
       <path
         d="M8.5 2.33331C9.69709 2.33331 10.6667 3.37748 10.6667 4.66665C10.6667 5.95581 9.69709 6.99998 8.5 6.99998C7.30292 6.99998 6.33334 5.95581 6.33334 4.66665C6.33334 3.37748 7.30292 2.33331 8.5 2.33331ZM8.5 11.6666C8.5 11.6666 12.8333 11.6666 12.8333 10.5C12.8333 9.09998 10.7208 7.58331 8.5 7.58331C6.27917 7.58331 4.16667 9.09998 4.16667 10.5C4.16667 11.6666 8.5 11.6666 8.5 11.6666Z"
         fill="currentColor" />
@@ -27,6 +27,10 @@
       <path
         d="M3.15321 3.76068C3.35195 3.76068 3.51357 3.60735 3.51357 3.4188V1.53846C3.51357 1.01051 4.07474 0.683761 4.59465 0.683761H5.49555C6.04276 0.683761 6.39645 1.01923 6.39645 1.53846V3.4188C6.39645 3.60735 6.55816 3.76068 6.75681 3.76068C6.95546 3.76068 7.11717 3.60735 7.11717 3.4188V1.53846C7.11717 0.647009 6.43519 0 5.49555 0H4.59465C3.60114 0 2.79285 0.690171 2.79285 1.53846V3.4188C2.79285 3.60735 2.95447 3.76068 3.15321 3.76068Z"
         fill="currentColor" />
+    </symbol>
+    <symbol id="slider-button" width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <circle class="small-circle" cx="6" cy="6" r="2.5" stroke="black" />
+      <circle cx="6" cy="6" r="5.5" stroke="black" />
     </symbol>
   </svg>
 
@@ -109,8 +113,10 @@
       <section class="main-slider">
         <h2 class="visually-hidden">Хит продаж</h2>
         <ul class="main-slider-list list">
-          <li class="main-slider-item main-slider-item--active">
-            <img class="main-slider-img-selfie" src="img/slider-1.png" width="384" height="486" alt="Селфи палка">
+          <li class="main-slider-item">
+            <div class="wrapper-main-slider-img">
+              <img class="main-slider-img-selfie" src="img/slider-1.png" width="384" height="486" alt="Селфи палка">
+            </div>
             <div class="wrapper-main-slider-text">
               <h3 class="title text">Делай селфи,<br> как Бен Стиллер!</h3>
               <p class="text-slider text">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь,
@@ -135,7 +141,10 @@
             </div>
           </li>
           <li class="main-slider-item">
-            <img class="main-slider-img-bracelet" src="img/slider-2.png" width="345" height="485" alt="Фитнес браслет">
+            <div class="wrapper-main-slider-img">
+              <img class="main-slider-img-bracelet" src="img/slider-2.png" width="345" height="485"
+                alt="Фитнес браслет">
+            </div>
             <div class="wrapper-main-slider-text">
               <h3 class="title text">Худеем <br> правильно!</h3>
               <p class="text-slider text">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать
@@ -151,7 +160,10 @@
             </div>
           </li>
           <li class="main-slider-item">
-            <img class="main-slider-img-quadcopter" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+            <div class="wrapper-main-slider-img">
+              <img class="main-slider-img-quadcopter" src="img/slider-3.png" width="526" height="334"
+                alt="Квадрокоптер">
+            </div>
             <div class="wrapper-main-slider-text">
               <h3 class="title text">Порхает как бабочка, жалит как пчела!</h3>
               <p class="text-slider text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером,
@@ -159,7 +171,7 @@
                 камеру.</p>
               <a class="main-slider-link link button" href="#">подробнее</a>
               <dl class="table-description">
-                <div class="wrapper-table-element">
+                <div class="wrapper-table-element wrapper-table-element--3">
                   <dt class="row-specifications">800 м</dt>
                   <dd class="row-category">Дальность полета</dd>
                 </div>
@@ -172,10 +184,24 @@
           </li>
         </ul>
         <div class="main-slider-controls">
-          <button class="slider-controls-button slider-controls-button--active" type="button"
-            aria-label="Первый слайд"></button>
-          <button class="slider-controls-button" type="button" aria-label="Второй слайд"></button>
-          <button class="slider-controls-button" type="button" aria-label="Третий слайд"></button>
+          <button class="slider-controls-button" type="button" aria-label="Первый слайд">
+            <svg class="controls-button-svg" id="slider-button" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle class="small-circle" cx="6" cy="6" r="2.5" stroke="black" />
+              <circle cx="6" cy="6" r="5.5" stroke="black" />
+            </svg>
+          </button>
+          <button class="slider-controls-button" type="button" aria-label="Второй слайд">
+            <svg class="controls-button-svg" id="slider-button" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle class="small-circle" cx="6" cy="6" r="2.5" stroke="black" />
+              <circle cx="6" cy="6" r="5.5" stroke="black" />
+            </svg>
+          </button>
+          <button class="slider-controls-button" type="button" aria-label="Третий слайд">
+            <svg class="controls-button-svg" id="slider-button" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle class="small-circle" cx="6" cy="6" r="2.5" stroke="black" />
+              <circle cx="6" cy="6" r="5.5" stroke="black" />
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -183,37 +209,37 @@
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list list">
           <li class="popular-item">
-            <a class="link" href="#">
+            <a class="popular-item-link link" href="#">
               <div class="popular-item-img popular--1"></div>
               <h3 class="popular-item-title text">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="popular-item">
-            <a class="link" href="catalog.html">
+            <a class="popular-item-link link" href="catalog.html">
               <div class="popular-item-img popular--2"></div>
               <h3 class="popular-item-title text">Моноподы для селфи</h3>
             </a>
           </li>
           <li class="popular-item">
-            <a class="link" href="#">
+            <a class="popular-item-link link" href="#">
               <div class="popular-item-img popular--3"></div>
               <h3 class="popular-item-title text">Экшн-камеры</h3>
             </a>
           </li>
           <li class="popular-item">
-            <a class="link" href="#">
+            <a class="popular-item-link link" href="#">
               <div class="popular-item-img popular--4"></div>
               <h3 class="popular-item-title text">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="popular-item">
-            <a class="link" href="#">
+            <a class="popular-item-link link" href="#">
               <div class="popular-item-img popular--5"></div>
               <h3 class="popular-item-title text">Умные часы</h3>
             </a>
           </li>
           <li class="popular-item">
-            <a class="link" href="#">
+            <a class="popular-item-link link" href="#">
               <div class="popular-item-img popular--6"></div>
               <h3 class="popular-item-title text">Квадрокоптеры</h3>
             </a>
@@ -282,7 +308,7 @@
         <p class="text-main text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со
           многими транспортными
           компаниями:</p>
-        <ul class="delivery-list">
+        <ul class="delivery-list list">
           <li class="delivery-item">Деловые линии</li>
           <li class="delivery-item">Автотрейдинг</li>
           <li class="delivery-item">ЖелДорЭкспедиция</li>
@@ -321,7 +347,7 @@
           </svg>Корзина</a>
       </div>
       <div class="wrap-footer-item wrap-footer-item--logo">
-        <a>
+        <a class="footer-logo-link">
           <img src=" img/logo-1.svg" width="163" height="35" alt="Логотип сайта">
         </a>
       </div>
