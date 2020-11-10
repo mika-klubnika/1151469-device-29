@@ -297,10 +297,10 @@
       <section class="contacts">
         <h2 class="title title-letter-spacing text">Контакты</h2>
         <p class="text-main text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="map">
-          <img src="img/map.png" alt="Карта">
-        </div>
-        <a class="wrapper-link link button" href="#">Напишите нам</a>
+        <button class="map" href="#">
+          <img src="img/map.png" width="560" height="222" alt="Карта">
+        </button>
+        <button class="wrapper-link link button write-to-us" href="#">Напишите нам</button>
       </section>
     </div>
     </main>
@@ -382,33 +382,36 @@
       </div>
     </div>
   </footer>
-  <script src="js/slider-javascript.js"></script>
-</body>
 
+  <section class="modal-form">
+    <form class="feedback" method="get" action="https://echo.htmlacademy.ru">
+      <label class="label-first" for="name">Ваше имя:
+      <input class="form-text" type="text" name="name" id="name" placeholder="Имя Фамилия">
+      </label>
+
+      <label for="email">Ваш e-mail:
+      <input class="form-text input-email" type="email" name="email" id="email" placeholder="email@example.com">
+      </label>
+
+      <label class="label-textarea" for="text">Текст письма:
+      <textarea class="form-text form-textarea" type="text" name="text" id="text" placeholder="В свободной форме"></textarea>
+      </label>
+      <button class="feedback-button button" type="submit">отправить</button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="modal-map">
+    <iframe
+        src="https://yandex.ru/map-widget/v1/-/CCUAiDE6PB" width="960" height="562" allowfullscreen="true">
+      </iframe>
+        <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
+  <script src="js/slider-javascript.js"></script>
+  <script src="js/javascript.js"></script>
+</body>
 </html>
 
-<section class="modal-form">
-  <form class="feedback" method="get" action="https://echo.htmlacademy.ru">
-    <label class="label-first" for="name">Ваше имя:
-    <input class="form-text" type="text" name="name" id="name" placeholder="Имя Фамилия">
-    </label>
 
-    <label for="email">Ваш e-mail:
-    <input class="form-text" type="email" name="email" id="email" placeholder="email@example.com">
-    </label>
-
-    <label class="label-textarea" for="text">Текст письма:
-    <textarea class="form-text form-textarea" type="text" name="text" id="text" placeholder="В свободной форме"></textarea>
-    </label>
-    <button class="feedback-button button" type="submit">отправить</button>
-  </form>
-  <button class="modal-close" type="button">Закрыть</button>
-</section>
-
-<section class="modal-map">
-  <iframe
-      src="https://yandex.ru/map-widget/v1/-/CCUAiDE6PB" width="960" height="562" frameborder="1" allowfullscreen="true" style="position:relative;">
-    </iframe>
-      <button class="modal-close" type="button">Закрыть</button>
-</section>
 
