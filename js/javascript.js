@@ -34,7 +34,7 @@ window.addEventListener("keydown", function (evt) {
       formModal.classList.remove("modal-show");
       formModal.classList.remove("modal-error");
     }
-}
+  }
 });
 
 var mapButton = document.querySelector('.map');

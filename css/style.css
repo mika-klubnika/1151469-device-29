@@ -81,6 +81,7 @@ body {
   padding: 0;
 
   font-family: "Gilroy", "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -166,13 +167,13 @@ img {
   height: 8px;
   background-color: var(--yellow-dark);
   z-index: -1;
+  transition: top 0.2s, height 0.2s;
 }
 
 .button:not(.active-services-button):hover::after,
 .button:not(.active-services-button):focus::after {
   top: 0;
   height: 100%;
-  transition: 0.4s linear;
 }
 
 .button:not(.active-services-button):active {
@@ -377,20 +378,16 @@ img {
   background-color: var(--yellow);
 }
 
-.submenu-list {
-  display: flex;
-}
-
 .submenu:hover>.wrapper-submenu-list {
   display: flex;
-  z-index: 1;
+  z-index: 3;
 }
 
 .submenu-item {
   padding-bottom: 17px;
 }
 
-.wrapper-submenu-item:not(:last-child) {
+.submenu-list:not(:last-child) {
   margin-right: 60px;
 }
 
@@ -527,7 +524,7 @@ img {
   bottom: 200px;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 9;
 }
 
 .slider-controls-button {
@@ -540,9 +537,6 @@ img {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  background-image: url(../img/slider-button.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 
 .slider-controls-button--active .small-circle {
@@ -1496,7 +1490,8 @@ img {
   background-color: var(--white-basic);
   box-shadow: var(--shadow);
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 10;
+  animation: bounce 0.6s;
 }
 
 .feedback {
@@ -1520,8 +1515,9 @@ img {
   width: 360px;
   height: 50px;
   margin-top: 10px;
+  padding: 15px 20px;
   background-color: var(--gray-input);
-  border: none;
+  border: 2px solid transparent;
   outline: none;
 }
 
@@ -1572,7 +1568,8 @@ img {
   background-color: var(--white-basic);
   box-shadow: var(--shadow);
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 10;
+  animation: bounce 0.6s;
 }
 
 .modal-map iframe {
@@ -1632,6 +1629,25 @@ img {
 .modal-error {
   animation: shake 0.6s;
 }
+
+@keyframes bounce {
+  0% {
+    transform: translate(-2000px, -50%);
+  }
+
+  70% {
+    transform: translate(-40%, -50%);
+  }
+
+  90% {
+    transform: translate(-55%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%,-50%);
+  }
+}
+
 
 @keyframes shake {
 
