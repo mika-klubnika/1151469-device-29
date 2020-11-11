@@ -1,14 +1,14 @@
-var formButton = document.querySelector('.write-to-us');
-var formModal = document.querySelector('.modal-form');
-var form = formModal.querySelector('form');
-var email = formModal.querySelector('.input-email');
-var feedbackButton = formModal.querySelector('.feedback-button');
-var close = formModal.querySelector('.modal-close');
+var formButton = document.querySelector(".write-to-us");
+var formModal = document.querySelector(.modal-form");
+var form = formModal.querySelector("form");
+var email = formModal.querySelector(".input-email");
+var feedbackButton = formModal.querySelector(".feedback-button");
+var close = formModal.querySelector(".modal-close");
 
 
 formButton.onclick = function() {
-  formModal.classList.add('modal-show');
-  formModal.classList.remove('modal-error');
+  formModal.classList.add("modal-show");
+  formModal.classList.remove("modal-error");
 };
 
 close.addEventListener("click", function (evt) {
@@ -37,14 +37,14 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-var mapButton = document.querySelector('.map');
-var mapModal= document.querySelector('.modal-map');
-var close = mapModal.querySelector('.modal-close');
+var mapButton = document.querySelector(".map");
+var mapModal= document.querySelector(".modal-map");
+var close = mapModal.querySelector(".modal-close");
 
 
 mapButton.onclick = function() {
-  mapModal.classList.add('modal-show');
-  mapModal.classList.remove('modal-error');
+  mapModal.classList.add("modal-show");
+  mapModal.classList.remove("modal-error");
 };
 
 close.addEventListener("click", function (evt) {
