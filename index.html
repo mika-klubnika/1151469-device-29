@@ -27,13 +27,15 @@
         fill="currentColor" />
     </symbol>
   </svg>
-  <header class="main-header container">
+  <div class="container">
+  <header class="main-header">
     <a class="main-logo">
       <img src="img/logo.svg" width="163" height="35" alt="Логотип «Device»">
     </a>
     <div class="wrapper-header-link">
       <form class="form-search-input" action="https://echo.htmlacademy.ru" method="post">
-        <input class="search-input" type="search" name="search" placeholder="Поиск по сайту">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input class="search-input" type="search" id="search" placeholder="Поиск по сайту">
         <button class="form-search-button" type="submit">найти</button>
       </form>
       <div class="wrapper-user-link">
@@ -96,10 +98,11 @@
       </nav>
     </div>
   </header>
+</div>
 
   <main>
     <h1 class="visually-hidden">Device - главная страница</h1>
-
+    <div class="container">
     <section class="main-slider container">
       <h2 class="visually-hidden">Хит продаж</h2>
       <ul class="main-slider-list list">
@@ -152,7 +155,7 @@
             <p class="text-slider text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
             <a class="main-slider-link link button" href="#">подробнее</a>
             <dl class="table-description">
-              <div class="wrapper-table-element wrapper-table-element--3">
+              <div class="wrapper-table-element">
                 <dt class="row-specifications">800 м</dt>
                 <dd class="row-category">Дальность полета</dd>
               </div>
@@ -170,8 +173,7 @@
         <button class="slider-controls-button" type="button" aria-label="слайд"></button>
       </div>
     </section>
-
-    <section class="popular container">
+    <section class="popular">
       <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="popular-list list">
         <li class="popular-item">
@@ -212,6 +214,7 @@
         </li>
       </ul>
     </section>
+  </div>
 
     <section class="services-slider-gradient">
       <div class="container services-slider">
@@ -240,23 +243,24 @@
         </ul>
       </div>
     </section>
-    <section class="partners container">
+    <div class="container">
+    <section class="partners">
       <h2 class="visually-hidden">Партнеры</h2>
       <a href="#">
-        <img src="img/djl.png" alt="Логотип «DJL»">
+        <img src="img/djl.png" width="260" height="100" alt="Логотип «DJL»">
       </a>
       <a href="#">
-        <img src="img/sp.png" alt="Логотип «SP ADGETS»">
+        <img src="img/sp.png" width="260" height="100" alt="Логотип «SP ADGETS»">
       </a>
       <a href="#">
-        <img src="img/gopro.png" alt="Логотип GoPro«»">
+        <img src="img/gopro.png" width="260" height="100" alt="Логотип GoPro«»">
       </a>
       <a href="#">
-        <img src="img/vive.png" alt="Логотип «VIVE»">
+        <img src="img/vive.png" width="260" height="100" alt="Логотип «VIVE»">
       </a>
     </section>
 
-    <div class="wrapper container">
+    <div class="wrapper">
       <section class="info">
         <h2 class="title title-letter-spacing text">О нас</h2>
         <p class="text-main text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -271,12 +275,13 @@
       <section class="contacts">
         <h2 class="title title-letter-spacing text">Контакты</h2>
         <p class="text-main text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <button class="map">
+        <a class="map" href="#">
           <img src="img/map.png" width="560" height="222" alt="Карта">
-        </button>
-        <button class="wrapper-link link button write-to-us">Напишите нам</button>
+        </a>
+        <a class="wrapper-link link button write-to-us" href="#">Напишите нам</a>
       </section>
     </div>
+  </div>
   </main>
 
   <footer class="main-footer">
@@ -349,7 +354,7 @@
           </li>
         </ul>
         <a class="footer-link yellow-logo-footer" href="#">
-          <img src="img/logo-html.png" alt="Логотип html academy" width="27" height="34">
+          <img src="img/logo-html.png" width="27" height="34" alt="Логотип html academy">
         </a>
       </div>
     </div>

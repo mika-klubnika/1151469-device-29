@@ -1,15 +1,16 @@
 var formButton = document.querySelector(".write-to-us");
-var formModal = document.querySelector(.modal-form");
+var formModal = document.querySelector(".modal-form");
 var form = formModal.querySelector("form");
 var email = formModal.querySelector(".input-email");
 var feedbackButton = formModal.querySelector(".feedback-button");
 var close = formModal.querySelector(".modal-close");
 
 
-formButton.onclick = function() {
+formButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
   formModal.classList.add("modal-show");
   formModal.classList.remove("modal-error");
-};
+});
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -42,10 +43,11 @@ var mapModal= document.querySelector(".modal-map");
 var close = mapModal.querySelector(".modal-close");
 
 
-mapButton.onclick = function() {
+mapButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
   mapModal.classList.add("modal-show");
   mapModal.classList.remove("modal-error");
-};
+});
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();

@@ -28,13 +28,15 @@
         fill="currentColor" />
     </symbol>
   </svg>
-  <header class="main-header container">
+  <div class="container">
+  <header class="main-header">
     <a class="main-logo" href="index.html">
       <img src="img/logo.svg" width="163" height="35" alt="Логотип «Device»">
     </a>
     <div class="wrapper-header-link">
       <form class="form-search-input" action="https://echo.htmlacademy.ru" method="post">
-        <input class="search-input" type="search" placeholder="Поиск по сайту">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input class="search-input" type="search" id="search" placeholder="Поиск по сайту">
         <button class="form-search-button" type="submit">найти</button>
       </form>
       <div class="wrapper-user-link">
@@ -42,7 +44,7 @@
             <svg class="header-svg" width="10" height="10">
               <use xlink:href="#icon-user"></use>
             </svg>Валентин Петухов</a>
-          <a class="go-out link" href="#">Выйти</a>
+          <a class="go-out header-link link" href="#">Выйти</a>
         <a class="compare header-link link" href="#">
           <svg class="header-svg" width="10" height="10">
             <use xlink:href="#icon-chart"></use>
@@ -98,8 +100,9 @@
       </nav>
     </div>
   </header>
-
-  <main class="container">
+</div>
+  <main>
+    <div class="container">
     <h1 class="catalog-title text">Моноподы для селфи</h1>
     <ul class="breadcrumbs list">
       <li class="breadcrumbs-item">
@@ -131,7 +134,7 @@
           </a>
         </div>
       </aside>
-      <aside class="filter">
+      <aside class="filter-wrapper">
         <div class="wrapper-filter">
           <h3 class="form-title text">фильтр:</h3>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -160,7 +163,7 @@
             <div class="wrapper-filter-item">
               <fieldset class="filter-item">
                 <legend class="filter-title">Цвет</legend>
-                <ul class="list">
+                <ul class="filter-color list">
                   <li class="filter-option">
                     <input class="visually-hidden filter-input-checkbox" type="checkbox" name="black" id="filter-black"
                       checked>
@@ -181,7 +184,7 @@
                     <label for="filter-red">Красный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pink" id="filter-pink" disabled>
                     <label for="filter-pink">Розовый</label>
                   </li>
                 </ul>
@@ -190,7 +193,7 @@
             <div class="wrapper-filter-item">
               <fieldset class="filter-item">
                 <legend class="filter-title">Bluetooth</legend>
-                <ul class="list">
+                <ul class="filter-radio list">
                   <li class="filter-option">
                     <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth-option"
                       value="with-Bluetooth" id="filter-yes" checked>
@@ -212,9 +215,7 @@
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="product-catalog-list list">
           <li class="product-catalog-item">
-            <a class="product-catalog-img" href="#">
-              <img src="img/item-1.png" alt="" width="360" height="380">
-            </a>
+              <img class="product-catalog-img" src="img/item-1.png" alt="Любительская селфи-палка" width="360" height="380">
             <div class="wrapper-product-cart">
               <button class="button-product-cart button">в корзину</button>
               <button class="product-cart-text">Добавить к сравнению</button>
@@ -225,9 +226,7 @@
             </div>
           </li>
           <li class="product-catalog-item">
-            <a class="product-catalog-img" href="#">
-              <img src="img/item-2.png" alt="" width="360" height="380">
-            </a>
+              <img class="product-catalog-img" src="img/item-2.png" alt="Профессиональная селфи-палка" width="360" height="380">
             <div class="wrapper-product-cart">
               <button class="button-product-cart button">в корзину</button>
               <button class="product-cart-text">Добавить к сравнению</button>
@@ -238,9 +237,7 @@
             </div>
           </li>
           <li class="product-catalog-item">
-            <a class="product-catalog-img" href="#">
-              <img src="img/item-3.png" alt="" width="360" height="380">
-            </a>
+              <img class="product-catalog-img" src="img/item-3.png" alt="Непотопляемая селфи-палка" width="360" height="380">
             <div class="wrapper-product-cart">
               <button class="button-product-cart button">в корзину</button>
               <button class="product-cart-text">Добавить к сравнению</button>
@@ -251,9 +248,7 @@
             </div>
           </li>
           <li class="product-catalog-item">
-            <a class="product-catalog-img" href="#">
-              <img src="img/item-4.png" alt="" width="360" height="380">
-            </a>
+              <img class="product-catalog-img" src="img/item-4.png" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
             <div class="wrapper-product-cart">
               <button class="button-product-cart button">в корзину</button>
               <button class="product-cart-text">Добавить к сравнению</button>
@@ -281,6 +276,7 @@
         </div>
       </section>
     </div>
+  </div>
   </main>
 
   <footer class="main-footer">
